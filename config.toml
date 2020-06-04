@@ -41,7 +41,7 @@ enableEmoji = true
   #  日期格式
   dateFormat = "2020-05-20"
   # 网站图片, 用于 Open Graph 和 Twitter Cards
-  images = ["/images/avatar.png"]
+  images = []
 
   #  应用图标配置
   [params.app]
@@ -89,15 +89,15 @@ enableEmoji = true
     #  页面头部导航栏标题配置
     [params.header.title]
       # LOGO 的 URL
-      logo = "/images/avatar.png"
+      logo = ""
       # 标题名称
-      name = "易海门的博客"
+      name = "<01/>"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = ""
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
       #  是否为标题显示打字机动画
-      typeit = false
+      typeit = true
 
   # 页面底部信息配置
   [params.footer]
@@ -324,7 +324,7 @@ enableEmoji = true
       images = []
       # 出版者信息
       [params.page.seo.publisher]
-        name = "YiHaiMen"
+        name = "YiHaimen"
         logoUrl = "/images/avatar.png"
 
   #  TypeIt 配置

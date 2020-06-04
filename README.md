@@ -1,8 +1,5 @@
 # 易海门个人博客站点
 
-![github pages](https://github.com/yihaimen/yihaimen.github.io/workflows/github-pages/badge.svg)
-
-
 ## 生成模板文章
 
 ```zsh
