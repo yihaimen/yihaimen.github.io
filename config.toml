@@ -151,8 +151,8 @@ enableEmoji = true
           paginate = 20
       # 主页的社交信息设置
       [languages.zh-cn.params.social]
-        GitHub = "https://github.com/yihaimen"
-        Bilibili = "https://space.bilibili.com/383362014"
+        GitHub = "yihaimen"
+        Bilibili = "383362014"
         Email = "yihaimen@outlook.com"
 
 [params]
