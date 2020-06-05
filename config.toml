@@ -6,7 +6,7 @@ languageCode = "zh-CN"
 # 是否包括中日韩文字
 hasCJKLanguage = false
 # 网站标题
-title = "易海门的博客"
+title = "易海门的官方网站"
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "LoveIt"
@@ -222,7 +222,7 @@ enableEmoji = true
       # LOGO 的 URL
       logo = ""
       # 标题名称
-      name = "<01/>"
+      name = "易海门的官方网站"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = ""
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
