@@ -1,12 +1,14 @@
 ---
 title: "你真的会写UnitTest吗？"
-date: 2020-06-07T23:32:11+08:00
+date: 2020-03-05T16:30:05+08:00
+lastmod: 2020-03-05T16:30:05+08:00
 author: "易海门"
 authorLink: "https://yihaimen.github.io"
 description: "通过学习到达真的会写UnitTest的目的"
 categories: ["TestDrivingJSApp"]
 tags: ["JavaScript", "TDD", "UnitTest"]
 license: "Creative Commons Attribution 4.0 International license"
+lightgallery: true
 draft: false
 ---
 
