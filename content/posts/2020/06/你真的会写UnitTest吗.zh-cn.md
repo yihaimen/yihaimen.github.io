@@ -1,15 +1,18 @@
 ---
+weight: 2
 title: "你真的会写UnitTest吗？"
-date: 2020-03-05T16:30:05+08:00
-lastmod: 2020-03-05T16:30:05+08:00
+date: 2020-06-07T01:30:05+08:00
+lastmod: 2020-06-07T01:30:05+08:00
+draft: false
 author: "易海门"
 authorLink: "https://yihaimen.github.io"
 description: "通过学习到达真的会写UnitTest的目的"
 categories: ["TestDrivingJSApp"]
 tags: ["JavaScript", "TDD", "UnitTest"]
+featuredImage: ""
+featuredImagePreview: "https://s1.ax1x.com/2020/06/08/tWOAa9.jpg"
 license: "Creative Commons Attribution 4.0 International license"
 lightgallery: true
-draft: false
 ---
 
 ### 引子
@@ -18,7 +21,7 @@ draft: false
 ### 查资料
 通过查看并回顾相关资料，我暂时了解了以下概念：
 1. 什么是测试？- 对代码功能的正确性验证
-2. 为什么要测试？- 解决各种“灵异”事件（神出鬼没的BUG），保证代码质量，方便维护，好的单元测试还能够更好的还原需求
+2. 为什么要测试？- 解决各种“灵异”事件（神出鬼没的BUG），保证代码质量，更好的还原需求，最重要的是要测交付价值 不写无用的测试
 3. 有哪些测试？- 单元测试、集成测试、性能测试等
 4. 单元测试中的一个单元指的是什么？- 书面说明是最小可测试单元。我认为可以是一个函数或者一个类。**期待大家的答案**
 5. 单元测试有几种常用方法论？- TDD、BDD <方法论不重要，重要的是使用方法论的人>
@@ -38,8 +41,8 @@ draft: false
 9. 如何覆盖全部场景？- 自补白盒测试
 10. 每个测试三段论
     1.  准备数据 - Given
-    2.  执行待测函数 - Then
-    3.  断言结果 - When
+    2.  执行待测函数 - When
+    3.  断言结果 - Then
 11. Test Double 有哪些？- 针对这个，我还是有些概论比较模糊，**期待大家的答案**
     1.  Dummy
     2.  Fake
@@ -49,3 +52,4 @@ draft: false
 
 ### 结语
 为了写好一个单元测试，需要知道和理解的不仅仅是上边那些，比如还需要有识别代码中坏味道的能力，好的代码书写习惯，准确快速的盲打手法，快捷键的使用等等。接下来，我将边学习边分享的方式与大家一道，最终到达**我真的会写 Unit Test** 的目的。
+![tWbbz8.png](https://s1.ax1x.com/2020/06/08/tWbbz8.png)
