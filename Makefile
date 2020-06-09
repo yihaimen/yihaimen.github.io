@@ -1,5 +1,5 @@
 
-post = default.zh.md
+post = default
 message = git commit
 Year_month = $(shell date +"%Y/%m")
 
