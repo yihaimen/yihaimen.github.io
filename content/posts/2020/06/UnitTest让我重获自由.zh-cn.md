@@ -6,8 +6,8 @@ authorLink: "https://yihaimen.github.io"
 description: ""
 featuredImage: ""
 featuredImagePreview: ""
-categories: ["JavaScript"]
-tags: ["JavaScript"]
+categories: ["TestDrivingJSApp"]
+tags: ["JavaScript", "TDD", "UnitTest"]
 license: "Creative Commons Attribution 4.0 International license"
 draft: true
 ---
