@@ -1,0 +1,25 @@
+---
+title: "玩转UnitTest之巧妙处理依赖"
+date: 2020-07-08T22:40:43+08:00
+author: "易海门"
+authorLink: "https://yihaimen.github.io"
+description: ""
+featuredImage: ""
+featuredImagePreview: ""
+categories: ["JavaScript"]
+tags: ["JavaScript"]
+license: "Creative Commons Attribution 4.0 International license"
+draft: false
+---
+
+## 0x00 引言
+大家好，我是你卖码为生的海门。今天想和大家探讨一下如何巧妙处理依赖，玩转 UnitTest。
+
+我们平时使用的网络请求库 Axios ，时间格式化库 moment 等，这些对我们的项目来说都是依赖，可以说依赖无处不在，它的存在更容易发起网络请求，格式化时间等，但同样也带来了问题 - 很难为代码编写单元测试。
+
+## 0x01 让我们开始吧
+在正式进入主题之前，我会先告诉你，为了让我们的单测达到 F.A.I.R 原则的标准，我们需要解决的问题是：
+1. 使用良好的设计，对依赖进行解耦，尽可能去除依赖；
+2. 实在去除不了的依赖，使用一些技术进行替代，我们称这些技术叫测试替身 - 包括 Dummy、Fake、Stub、Mock和Spy。
+
+额外附赠温馨提示：要学会巧妙使用替身！
