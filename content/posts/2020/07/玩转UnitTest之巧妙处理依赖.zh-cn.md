@@ -27,6 +27,7 @@ draft: false
 通过简单的需求分析和任务拆分，都会认为这个需求很简单。可是我们如何为它写自动化测试呢？没有写过UT的我，刚开始也是很懵的。跟我刚开始被要求为功能写单元测试的时候一样懵，完全不知道从那入手~我在搜索引擎中找到了一个解决方法，即借助![Spike解决方案](https://blog.ming.ws/posts/read/10x-develop-technique/technical-spkie/#post)。
 
 ### 1、借助Spike技术编写原型代码
+![origin-code]()
 
 ### 2、从中获得一些信息
 * getCurrentPosition是一个异步函数，包含成功和失败两个回调函数
