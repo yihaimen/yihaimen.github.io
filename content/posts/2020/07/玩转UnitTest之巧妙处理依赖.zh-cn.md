@@ -1,21 +1,22 @@
 ---
 title: "玩转UnitTest之巧妙处理依赖"
 date: 2020-07-08T22:40:43+08:00
+draft: false
 author: "易海门"
 authorLink: "https://yihaimen.github.io"
-description: ""
+description: "通过学习到达真的会写 UnitTest 的目的"
+categories: ["TestDrivingJSApp"]
+tags: ["JavaScript", "TDD", "UnitTest"]
 featuredImage: ""
-featuredImagePreview: ""
-categories: ["JavaScript"]
-tags: ["JavaScript"]
+featuredImagePreview: "https://s1.ax1x.com/2020/06/08/tWOAa9.jpg"
 license: "Creative Commons Attribution 4.0 International license"
-draft: false
+lightgallery: true
 ---
 
 ## 0x00 引言
 大家好，我是以卖码为生的海门。今天想和大家探讨一下如何巧妙处理依赖，玩转 UnitTest。
 
-我们平时使用的网络请求库 Axios ，时间格式化库 moment 等，这些对我们的项目来说都是依赖，可以说依赖无处不在，它的存在更容易发起网络请求，格式化时间等，但同样也带来了问题 - 很难为代码编写单元测试。
+我们平时使用的网络请求库 Axios 等，这些对我们的项目来说都是依赖，可以说依赖无处不在，它的存在更容易发起网络请求，格式化时间等，但同样也带来了问题 - 很难为代码编写单元测试。
 
 ## 0x01 让我们开始吧
 在正式进入主题之前，我会先告诉你，为了让我们的单测达到 F.A.I.R 原则的标准，我们需要解决的问题是：
@@ -27,7 +28,7 @@ draft: false
 通过简单的需求分析和任务拆分，都会认为这个需求很简单。可是我们如何为它写自动化测试呢？没有写过UT的我，刚开始也是很懵的。跟我刚开始被要求为功能写单元测试的时候一样懵，完全不知道从那入手~我在搜索引擎中找到了一个解决方法，即借助![Spike解决方案](https://blog.ming.ws/posts/read/10x-develop-technique/technical-spkie/#post)。
 
 ### 1、借助Spike技术编写原型代码
-![origin-code]()
+![origin-code](https://s1.ax1x.com/2020/07/21/UTnzh6.png)
 
 ### 2、从中获得一些信息
 * getCurrentPosition是一个异步函数，包含成功和失败两个回调函数
@@ -42,18 +43,14 @@ draft: false
 
 接下来我们将 spike 阶段的原型代码进行拆分，是每个小功能都是一个小函数，每个小函数具有单一职责和最少依赖的特征。
 
-![设计流程图]()
+![设计流程图](https://s1.ax1x.com/2020/07/21/UTu4DH.jpg)
 
 下边需要做的就是为每一个函数编写自动化测试，以验证它们的行为。
 依赖在整个问题中占据了很重要的作用，编写自动化测试的第一步就是确定一个或多个不具有内部依赖的函数，这些函数应该成为自动化测试的起点。
 
 createUrl 就是我们要找函数，因为它没有任何其他依赖的代码测起来相对容易，只需要接收到正确的位置信息，然后创建一条符合预期的URL 就可以了。
 
-![code]()
-
-![code-test]()
-
-接下来根据测试列表中的用例为其编写反向测试、异常测试，之前介绍过方法就不再赘述了。
+接下来根据测试列表中的用例为其编写同步测试、反向测试、异常测试，之前介绍过方法就不再赘述了。
 
 ### 4、使用测试替身
 接下来就是有依赖需要处理的函数，我们需要使用替身来解决第二个问题。
@@ -70,7 +67,7 @@ createUrl 就是我们要找函数，因为它没有任何其他依赖的代码�
 在正式开始前，我们还需要了解什么是依赖注入：
 依赖注入是用测试替身代替依赖的一种流行、通用的技术。也就是说依赖是作为一个参数传递给函数的，而不是直接在函数中引用的。
 
-![code2]()
+![UTK95q.png](https://s1.ax1x.com/2020/07/21/UTK95q.png)
 
 ### 5、交互测试
 什么是交互测试？
@@ -86,10 +83,12 @@ createUrl 就是我们要找函数，因为它没有任何其他依赖的代码�
 2、调用了getCurrentPosition函数，没有传递了预期的回调函数，测试失败；
 3、没有调用getCurrentPosition函数，测试失败。
 
-![code3]()
+![UTKMPx.png](https://s1.ax1x.com/2020/07/21/UTKMPx.png)
 
 ## 0x02 总结
 通过我自己的学习与实践，得知道理都懂，还是需要多练多看，不然还是不知道如何下手。在真正学会测试驱动代码设计之后呢，就需要学会如何识别‘坏味道’即重构手法，这也是需要平时的积累。最后就是去学习能提高效率的指法和快捷键的使用。
+
+最后，接下来根据自己的计划，需要学习数据结构了，同时也需要进一步去实践单元测试，之后至少会出一篇 Node.js 的单元测试策略和一篇 React 的单元测试策略的文章。
 
 ## 0x03 参考
 * 《JavaScript测试驱动开发》
