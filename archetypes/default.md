@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-author: "易海门"
+author: "非著名代码家"
 authorLink: "https://yihaimen.github.io"
 description: ""
 featuredImage: ""
